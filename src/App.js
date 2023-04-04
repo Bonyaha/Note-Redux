@@ -6,19 +6,6 @@ import { initializeNotes } from './reducers/noteReducer'
 
 import { useDispatch } from 'react-redux'
 
-const App = () => {
-  const dispatch = useDispatch()
-  useEffect(() => {
-    dispatch(initializeNotes())
-  }, [dispatch])
-
-  return (
-    <div>
-      <NewNote />
-      <VisibilityFilter />
-      <Notes />
-    </div>
-  )
-}
+const App = () => {}
 
 export default App
