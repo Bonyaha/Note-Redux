@@ -18,11 +18,6 @@ const App = () => {
     newNoteMutation.mutate({ content, important: true })
   }
 
-  /* const updateNoteMutation = useMutation(updateNote, {
-    onSuccess: () => {
-      queryClient.invalidateQueries('notes')
-    },
-  }) */
   const updateNoteMutation = useMutation(updateNote, {
     onSuccess: (updatedNote) => {
       const previousNotes = queryClient.getQueryData('notes')
